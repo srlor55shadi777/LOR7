@@ -15,8 +15,7 @@ body {
     padding: 20px;
     background-color: #1b1b1b;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    border: 2px solid #ff6600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* تم استبدال الإطار بظلال */
 }
 
 .logo-container img {
@@ -30,6 +29,30 @@ body {
     font-size: 1.2em;
     color: #ffcc00;
     margin: 10px 0;
+}
+
+/* إعلانات متحركة */
+.slideshow {
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.slides {
+    display: flex;
+    animation: slide 10s infinite linear;
+}
+
+.slides img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
 
 .offer-section {
@@ -113,62 +136,44 @@ body {
     border-radius: 10px;
     color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid #333;
-}
-
-.service-box h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #ff6600;
-}
-
-.discounted-price {
-    text-decoration: none;
-    font-weight: bold;
-    color: #ff6600;
-    font-size: 1.1em;
-    background-color: #333;
-    padding: 5px;
-    border-radius: 5px;
-    display: block;
     text-align: center;
 }
 
-.service-box:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s;
+.service-box h3 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #ffcc00;
 }
 
-/* Footer styling */
+.discounted-price {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #ff6600;
+}
+
 .footer-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     background-color: #1b1b1b;
-    border-top: 2px solid #ff6600;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+    border-top: 1px solid #333;
 }
 
 .footer-container img {
-    max-width: 60px;
+    max-width: 50px;
     height: auto;
-    margin: 0 10px;
+    margin-right: 10px;
+}
+
+.footer-container .whatsapp-icon {
+    color: #25D366;
+    font-size: 24px;
+    margin-left: 10px;
+    text-decoration: none;
 }
 
 .footer-container span {
-    color: #ff6600;
-    font-size: 1.5em;
-    margin: 0 10px;
-}
-
-.whatsapp-icon img {
-    max-width: 40px;
-    height: auto;
-    margin: 0 10px;
-    transition: transform 0.2s;
-}
-
-.whatsapp-icon img:hover {
-    transform: scale(1.1);
-}
+    color: #fff;
+    font-size: 1.2em;
+    }
