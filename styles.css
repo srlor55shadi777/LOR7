@@ -19,7 +19,7 @@ body {
 }
 
 .logo-container img {
-    max-width: 60px; /* تكبير الشعار بمقدار 5 بكسل إضافية */
+    max-width: 130px; /* تكبير الشعار إلى 130 بكسل */
     height: auto;
     margin-bottom: 10px;
 }
@@ -40,7 +40,8 @@ body {
 
 .slides {
     display: flex;
-    animation: slide 10s infinite linear;
+    animation: slide 10s infinite linear; /* حركة مستمرة دون توقف */
+    gap: 20px; /* إضافة مسافات بين الصور */
 }
 
 .slides img {
@@ -51,8 +52,8 @@ body {
 }
 
 @keyframes slide {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% - 20px)); } /* تحريك كامل العرض مع المسافة المضافة */
 }
 
 .offer-section {
@@ -176,4 +177,4 @@ body {
 .footer-container span {
     color: #fff;
     font-size: 1.2em;
-    }
+}
