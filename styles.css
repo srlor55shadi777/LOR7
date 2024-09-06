@@ -178,3 +178,38 @@ body {
     color: #fff;
     font-size: 1.2em;
 }
+
+/* زر خدمة العملاء الثابت */
+.customer-service {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6600;
+    border-radius: 50%;
+    padding: 0; /* إزالة البادينغ لتناسب الحجم الجديد */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 55px; /* عرض الزر */
+    height: 55px; /* ارتفاع الزر */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-service a {
+    display: inline-block;
+    color: #fff;
+    font-size: 29px; /* حجم الأيقونة المناسب للزر الأكبر */
+    text-decoration: none;
+}
+
+.customer-service a:hover {
+    /* إزالة تأثير hover على الزر */
+    color: #fff;
+    background-color: #ff6600;
+    border-radius: 50%;
+}
+
+.customer-service i {
+    font-size: 30px; /* تكبير حجم الأيقونة ليتناسب مع حجم الزر */
+    }
