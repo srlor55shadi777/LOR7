@@ -9,23 +9,47 @@
 <body>
     <div class="chat-container">
         <div class="header">
-            <img src="logo.png" alt="شعار" class="logo">
+            <img src="https://i.ibb.co/KWQjXw2/20240903-233949.png" alt="شعار" class="logo">
             <h1>خدمة العملاء</h1>
         </div>
 
         <div class="chat-box">
             <div class="messages" id="messageContainer">
-                <!-- الرسائل ستظهر هنا -->
+                <!-- الرسالة الترحيبية -->
+                <div class="bot-message">أهلاً بك في خدمة عملاء لور! كيف يمكنني مساعدتك؟</div>
             </div>
         </div>
 
+        <!-- القائمة الأولى -->
         <div class="question-box">
-            <button id="mainQuestion" class="main-question-btn">كم من الوقت تحتاج حتى ينتهي طلبي؟</button>
-            <div id="options" class="options">
+            <button id="mainQuestion1" class="main-question-btn">كم من الوقت تحتاج حتى ينتهي طلبي؟</button>
+            <div id="options1" class="options">
+                <button class="close-btn" onclick="closeOptions('options1')">X</button>
                 <button class="option-btn" onclick="showAnswer('menu')">تصميم المنيو الإلكتروني</button>
                 <button class="option-btn" onclick="showAnswer('ad')">تصميم إعلان منصات التواصل الاجتماعي</button>
                 <button class="option-btn" onclick="showAnswer('custom')">الطلبات الخاصة</button>
                 <button class="option-btn" onclick="showAnswer('qr')">تصميم لوحات QR</button>
+            </div>
+        </div>
+
+        <!-- القائمة الثانية -->
+        <div class="question-box">
+            <button id="mainQuestion2" class="main-question-btn">ما هي طرق الدفع المتاحة؟</button>
+            <div id="options2" class="options">
+                <button class="close-btn" onclick="closeOptions('options2')">X</button>
+                <button class="option-btn" onclick="showAnswer('credit')">الدفع عن طريق بطاقة الائتمان</button>
+                <button class="option-btn" onclick="showAnswer('paypal')">الدفع عن طريق PayPal</button>
+                <button class="option-btn" onclick="showAnswer('cash')">الدفع عند الاستلام</button>
+            </div>
+        </div>
+
+        <!-- القائمة الثالثة -->
+        <div class="question-box">
+            <button id="mainQuestion3" class="main-question-btn">كيف يمكنني متابعة طلبي؟</button>
+            <div id="options3" class="options">
+                <button class="close-btn" onclick="closeOptions('options3')">X</button>
+                <button class="option-btn" onclick="showAnswer('track')">استخدام رقم التتبع</button>
+                <button class="option-btn" onclick="showAnswer('support')">التواصل مع الدعم الفني</button>
             </div>
         </div>
     </div>
