@@ -1,8 +1,23 @@
-document.getElementById('mainQuestion').addEventListener('click', function () {
-    document.getElementById('options').style.display = 'block';
-    let optionButtons = document.querySelectorAll('.option-btn');
-    optionButtons.forEach(button => button.style.display = 'block');
+document.getElementById('mainQuestion1').addEventListener('click', function () {
+    toggleOptions('options1');
 });
+
+document.getElementById('mainQuestion2').addEventListener('click', function () {
+    toggleOptions('options2');
+});
+
+document.getElementById('mainQuestion3').addEventListener('click', function () {
+    toggleOptions('options3');
+});
+
+function toggleOptions(id) {
+    let optionsDiv = document.getElementById(id);
+    if (optionsDiv.style.display === 'block') {
+        optionsDiv.style.display = 'none';
+    } else {
+        optionsDiv.style.display = 'block';
+    }
+}
 
 function showAnswer(option) {
     let responseText = '';
@@ -24,6 +39,26 @@ function showAnswer(option) {
         case 'qr':
             responseText = 'يستغرق تصميم لوحات QR يومًا واحدًا مع التوصيل في اليوم التالي.';
             userMessage = 'تصميم لوحات QR';
+            break;
+        case 'credit':
+            responseText = 'يمكنك الدفع عبر بطاقة الائتمان.';
+            userMessage = 'الدفع عن طريق بطاقة الائتمان';
+            break;
+        case 'paypal':
+            responseText = 'يمكنك الدفع عبر PayPal.';
+            userMessage = 'الدفع عن طريق PayPal';
+            break;
+        case 'cash':
+            responseText = 'يمكنك الدفع عند الاستلام.';
+            userMessage = 'الدفع عند الاستلام';
+            break;
+        case 'track':
+            responseText = 'يمكنك متابعة طلبك عبر رقم التتبع.';
+            userMessage = 'استخدام رقم التتبع';
+            break;
+        case 'support':
+            responseText = 'تواصل مع الدعم الفني لمتابعة طلبك.';
+            userMessage = 'التواصل مع الدعم الفني';
             break;
     }
 
@@ -48,4 +83,8 @@ function showAnswer(option) {
 
     // الانتقال إلى أسفل المحادثة تلقائيًا
     messageContainer.scrollTop = messageContainer.scrollHeight;
-      }
+}
+
+function closeOptions(id) {
+    document.getElementById(id).style.display = 'none';
+}
