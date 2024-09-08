@@ -17,8 +17,8 @@ body {
 }
 
 .header {
-    background-color: #ff9800;
-    color: white;
+    background-color: black;
+    color: #ff9800;
     padding: 15px;
     display: flex;
     align-items: center;
@@ -52,22 +52,21 @@ body {
     border-radius: 10px;
     margin: 5px 0;
     max-width: 70%;
+    color: white;
 }
 
 .bot-message {
-    background-color: #ff9800;
-    color: black;
+    background-color: #444;
     align-self: flex-start;
 }
 
 .user-message {
-    background-color: #444;
+    background-color: #ff9800;
     align-self: flex-end;
-    color: white;
 }
 
 .question-box {
-    padding: 20px;
+    padding: 10px 20px;
     background-color: #4a4a4a;
 }
 
@@ -79,20 +78,37 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .option-btn {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0;
     background-color: #555;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.options {
     display: none;
 }
 
-#options {
-    display: none;
+.close-btn {
+    float: right;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
